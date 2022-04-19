@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MasterPage1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1120px;
+        }
+        .auto-style2 {
+            width: 1120px;
+            height: 34px;
+        }
+        .auto-style3 {
+            width: 1120px;
+            height: 243px;
+        }
+        .auto-style4 {
+            width: 1120px;
+            font-size: small;
+            text-align: center;
+        }
+        #baniere {
+            background-color: #C0C0C0;
+            border: thin solid #808080;
+            margin: auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr id="baniere">
+                    <th class="auto-style1">
+                        Baniere
+                    </th>
+                </tr>
+
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Ouvages.aspx" Text="Ouvrages" Value="Ouvrages"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Classification.aspx" Text="Classification" Value="Nouvel élément&nbsp;"></asp:MenuItem>
+                                <asp:MenuItem Text="Déconnecter" Value="Déconnecter" NavigateUrl="~/Déconnecter.aspx"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style4">
+                       
+                        Copy right ISMO 2022</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
